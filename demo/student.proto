@@ -1,0 +1,14 @@
+syntax = "proto3";
+package student;
+
+message student {
+    string name = 1;
+    bool male = 2;
+    repeated int32 scores = 3;
+}
+
+enum ErrStudent{
+    Err_Name_Cannot_Print = 0;
+    Err_Transgender = 1;
+    Err_Grade_Zero = 2;
+}
