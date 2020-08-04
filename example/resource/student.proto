@@ -8,7 +8,10 @@ message student {
 }
 
 enum ErrStudent{
+    // 注释1
     Err_Name_Cannot_Print = 0;
+    // 注释2
     Err_Transgender = 1;
+    // 注释3
     Err_Grade_Zero = 2;
 }

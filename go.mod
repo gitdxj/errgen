@@ -1,4 +1,4 @@
-module github.com/gitdxj/parserTest
+module github.com/gitdxj/errgen
 
 go 1.13
 

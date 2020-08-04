@@ -1,5 +1,5 @@
 
-package student	
+package myerr2	
 import (
 	"errors"
 )
@@ -17,11 +17,11 @@ const (
 func (e ErrStudent) Error() error {
 	switch e {
 	case Err_Name_Cannot_Print:
-		return errors.New("0: Err_Name_Cannot_Print")
+		return errors.New("注释1")
 	case Err_Transgender:
-		return errors.New("1: Err_Transgender")
+		return errors.New("注释2")
 	case Err_Grade_Zero:
-		return errors.New("2: Err_Grade_Zero")
+		return errors.New("注释3")
 
 	}
 	return nil
