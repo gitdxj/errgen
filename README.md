@@ -41,3 +41,28 @@ func (e ErrStudent) Error() error {
 	return nil
 }
 ```
+其中返回的错误描述，如果在proto文件中使用注释进行标明，就直接使用注释中的描述，如：
+```
+enum ErrStudent{
+    // 注释1
+    Err_Name_Cannot_Print = 0;
+    // 注释2
+    Err_Transgender = 1;
+    // 注释3
+    Err_Grade_Zero = 2;
+}
+```
+```go
+func (e ErrStudent) Error() error {
+	switch e {
+	case Err_Name_Cannot_Print:
+		return errors.New("注释1")
+	case Err_Transgender:
+		return errors.New("注释2")
+	case Err_Grade_Zero:
+		return errors.New("注释3")
+
+	}
+	return nil
+}
+```
