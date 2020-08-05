@@ -1,5 +1,7 @@
 # 从Proto文件中生成Error
 在proto文件中定义错误信息，我们经常用enum来实现，而此种方法并不能产生golang中的error，实际使用当中并不方便。  
+.proto 文件的解析 使用的是 [pbparser](https://github.com/tallstoat/pbparser)，这个包不依赖任何protobuf的官方包  
+
 使用 error generator 例子如下：  
 
 
