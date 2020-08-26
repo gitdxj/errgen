@@ -1,8 +1,5 @@
 
-package myerr2	
-import (
-	"errors"
-)
+package student	
 
 type ErrStudent uint32
 
@@ -14,15 +11,15 @@ const (
 )
 
 
-func (e ErrStudent) Error() error {
+func (e ErrStudent) Error() string {
 	switch e {
 	case Err_Name_Cannot_Print:
-		return errors.New("注释1")
+		return "0: Err_Name_Cannot_Print"
 	case Err_Transgender:
-		return errors.New("注释2")
+		return "注释2"
 	case Err_Grade_Zero:
-		return errors.New("注释3")
+		return "注释3"
 
 	}
-	return nil
+	return ""
 }
